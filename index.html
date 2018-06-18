@@ -1,7 +1,13 @@
-<h1>Hello</h1>
-navigator.usb.requestDevice({ filters: [{ vendorId: 0x67b }] })
-.then(device => {
-  console.log(device.productName);      // "Arduino Micro"
-  console.log(device.manufacturerName); // "Arduino LLC"
-})
-.catch(error => { console.log(error); });
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WebUSB Demos</title>
+  </head>
+  <body>
+    <h1>WebUSB Demos</h1>
+    <ul>
+      <li><a href="console/">Console</a></li>
+      <li><a href="rgb/">RGB LED</a></li>
+    </ul>
+  </body>
+</html>
