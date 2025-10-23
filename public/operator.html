@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Operator Dashboard</title>
+    <link rel="stylesheet" href="/public/css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Operator Dashboard</h1>
+      <nav>
+        <a href="/public/admin.html">Admin View</a>
+      </nav>
+    </header>
+
+    <section class="controls">
+      <label>
+        Step:
+        <select id="stepSelect"></select>
+      </label>
+      <label>
+        Show:
+        <select id="statusSelect">
+          <option value="ready">Ready</option>
+          <option value="in_progress">In Progress</option>
+          <option value="done">Done</option>
+        </select>
+      </label>
+      <button id="refreshBtn">Refresh</button>
+    </section>
+
+    <main>
+      <div id="orders"></div>
+    </main>
+
+    <script src="/public/js/operator.js"></script>
+  </body>
+</html>
