@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="/public/css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Admin Dashboard</h1>
+      <nav>
+        <a href="/public/operator.html">Operator View</a>
+      </nav>
+    </header>
+
+    <section class="controls">
+      <label>
+        View:
+        <select id="viewMode">
+          <option value="list">List</option>
+          <option value="kanban">Kanban (by step)</option>
+        </select>
+      </label>
+      <label>
+        Step:
+        <select id="stepSelect"></select>
+      </label>
+      <button id="refreshBtn">Refresh</button>
+    </section>
+
+    <main>
+      <div id="listView" class="view"></div>
+      <div id="kanbanView" class="view" style="display:none;"></div>
+    </main>
+
+    <script src="/public/js/admin.js"></script>
+  </body>
+</html>

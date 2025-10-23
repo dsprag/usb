@@ -1,0 +1,33 @@
+{
+  "name": "workspace",
+  "version": "1.0.0",
+  "description": "E-commerce order management dashboards (admin and operator) with workflow steps and Shopify sync.",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "seed": "node src/seed.js",
+    "sync:shopify": "node -e \"(async()=>{const {connect}=require('./src/db');const {DB_PATH}=require('./src/config');const {syncShopifyOnce}=require('./src/services/shopify');const db=connect(DB_PATH);const res=await syncShopifyOnce(db);console.log(res);})().catch(e=>{console.error(e);process.exit(1);})\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dsprag/usb.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dsprag/usb/issues"
+  },
+  "homepage": "https://github.com/dsprag/usb#readme",
+  "dependencies": {
+    "axios": "^1.12.2",
+    "better-sqlite3": "^12.4.1",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
